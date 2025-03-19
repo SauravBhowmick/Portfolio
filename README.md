@@ -1,5 +1,5 @@
 # Portfolio
-A beginner Portfolio Website (Credits Ryan Fitzgerald (https://github.com/RyanFitzgerald/devportfolio))
+A beginner Portfolio Website (Credits [Ryan Fitzgerald](https://github.com/RyanFitzgerald/devportfolio))
 =======
 # Dev Portfolio
 
