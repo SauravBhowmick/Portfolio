@@ -1,7 +1,7 @@
 /*!
     Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 18/03/2025
+    Version: 1.2.3
+    Last Change: 08/10/2025
     Author: Saurav Bhowmick (credits :- Ryan Fitzgerald)
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
     Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
@@ -10,6 +10,11 @@
     that don't come from third party libraries. This file gets compiled using
     Gulp and send to the /css folder which is then loaded on the page.
 */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Lato', sans-serif;
@@ -93,7 +98,8 @@ header li {
 header a {
     display: block;
     color: #3498db;
-    padding: 10px
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 header a:hover {
@@ -132,7 +138,12 @@ header.sticky {
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: #fff
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-open:hover {
+    transform: scale(1.1);
 }
 
 #mobile-menu-close {
@@ -144,7 +155,12 @@ header.sticky {
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: #3498db
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-close:hover {
+    color: #217dbb;
 }
 
 #mobile-menu-close span {
@@ -181,11 +197,22 @@ footer {
     height: 35px;
     border-radius: 50%;
     border: 3px solid #b9bfc4;
-    text-align: center
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.top span:hover {
+    border-color: #3498db;
+    transform: translateY(-3px);
 }
 
 .top i {
-    color: #74808a
+    color: #74808a;
+    transition: all 0.3s ease;
+}
+
+.top span:hover i {
+    color: #3498db;
 }
 
 .social {
@@ -206,11 +233,13 @@ footer {
 .social a {
     display: block;
     color: #74808a;
-    padding: 10px
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 .social a:hover {
-    color: #3498db
+    color: #3498db;
+    transform: translateY(-3px);
 }
 
 .btn-rounded-white {
@@ -225,7 +254,8 @@ footer {
 .btn-rounded-white:hover {
     color: #3498db;
     background: #fff;
-    text-decoration: none
+    text-decoration: none;
+    transform: scale(1.05);
 }
 
 .shadow {
@@ -291,14 +321,27 @@ footer {
     font-size: 5em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    line-height: 0.9em
+    line-height: 0.9em;
+    animation: fadeInUp 1s ease;
 }
 
 #lead-content h2 {
     color: #a0cfee;
     font-weight: 500;
     font-size: 2.25em;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #lead-overlay {
@@ -332,7 +375,12 @@ footer {
     height: 35px;
     border-radius: 50%;
     border: 3px solid #a0cfee;
-    text-align: center
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#lead-down span:hover {
+    border-color: #fff;
 }
 
 #lead-down i {
@@ -365,7 +413,12 @@ footer {
 
 #about p {
     color: #74808a;
-    margin: 0
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
 }
 
 #experience {
@@ -415,7 +468,13 @@ footer {
     border: 1px solid #e6e6e6;
     padding: 15px;
     border-radius: 3px;
-    text-align: left
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.vtimeline-content:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
 }
 
 .vtimeline-content h3 {
@@ -436,7 +495,16 @@ footer {
 .vtimeline-content p {
     color: #74808a;
     font-size: 0.9em;
-    margin: 0
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.vtimeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+.vtimeline-content strong {
+    color: #374054;
 }
 
 .vtimeline-point {
@@ -455,7 +523,12 @@ footer {
     border-radius: 50%;
     float: left;
     z-index: 99;
-    margin-left: 280px
+    margin-left: 280px;
+    transition: all 0.3s ease;
+}
+
+.vtimeline-point:hover .vtimeline-icon {
+    transform: scale(1.1);
 }
 
 .vtimeline-icon i {
@@ -491,7 +564,13 @@ footer {
     margin: 0 auto 30px auto;
     padding: 15px;
     border: 1px solid #dcd9d9;
-    text-align: left
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.education-block:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
 }
 
 .education-block h3 {
@@ -515,13 +594,22 @@ footer {
 
 .education-block p,
 .education-block ul {
-    margin: 0;
+    margin: 0 0 10px 0;
     color: #74808a;
-    font-size: 0.9em
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.education-block p:last-child {
+    margin-bottom: 0;
 }
 
 .education-block ul {
     padding: 0 0 0 15px
+}
+
+.education-block strong {
+    color: #374054;
 }
 
 #projects {
@@ -542,11 +630,22 @@ footer {
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
-    border-radius: 4px
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
     float: left
+}
+
+.project-image img {
+    max-width: 300px;
+    height: auto;
 }
 
 .project-info {
@@ -567,7 +666,19 @@ footer {
 .project-info p {
     color: #74808a;
     margin: 0 0 15px 0;
-    font-size: 0.9em
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.project-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-info a:hover {
+    color: #217dbb;
+    text-decoration: underline;
 }
 
 .no-image .project-info {
@@ -608,19 +719,56 @@ footer {
     background: #e4e4ea;
     list-style: none;
     cursor: default;
-    font-size: 1.2em
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+#skills li:hover {
+    background: #3498db;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 #awards {
     background: #f2f2f5;
     padding: 75px 15px;
     border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+}
+
+#awards h2 {
+    color: #374054;
+    margin-bottom: 50px;
+}
+
+#awards .project {
+    background: #fff;
+}
+
+#awards .project-image img {
+    max-width: 300px;
+    height: auto;
 }
 
 #volunteer {
     background: #fff;
     padding: 75px 15px;
     border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+}
+
+#volunteer h2 {
+    color: #374054;
+    margin-bottom: 50px;
+}
+
+#volunteer .project {
+    background: #fff;
+}
+
+#volunteer .project-image img {
+    max-width: 300px;
+    height: auto;
 }
 
 #contact {
@@ -640,6 +788,15 @@ footer {
     margin: 0 auto
 }
 
+#contact-form label {
+    display: block;
+    text-align: left;
+    color: #1d6fa5;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
 #contact-form input,
 #contact-form textarea {
     display: block;
@@ -650,7 +807,8 @@ footer {
     margin-bottom: 10px;
     background: #1d6fa5;
     color: #fff;
-    transition: .5s ease all
+    transition: .5s ease all;
+    font-family: 'Lato', sans-serif;
 }
 
 #contact-form input::-webkit-input-placeholder,
@@ -696,11 +854,14 @@ footer {
     color: #3498db;
     font-weight: 700;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: .5s ease all
+    transition: .5s ease all;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
 }
 
 #contact-form button:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-2px);
 }
 
 .optional-section {
@@ -719,7 +880,12 @@ footer {
     padding: 15px;
     border: 1px solid #dcd9d9;
     background: #fff;
-    text-align: left
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.optional-section-block:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .optional-section-block h3 {
@@ -739,7 +905,8 @@ footer {
 .optional-section-block ul {
     margin: 0 0 15px 0;
     color: #74808a;
-    font-size: 0.9em
+    font-size: 0.9em;
+    line-height: 1.5;
 }
 
 .optional-section-block ul {
