@@ -648,18 +648,22 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .project-image {
-    float: left;
+    flex-shrink: 0;
+
+    img {
+        display: block;
+    }
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    flex: 1;
     padding: 15px;
+    text-align: left;
 
     h3 {
         font-size: 1.5em;
@@ -958,16 +962,16 @@ footer {
         }
     }
 
+    .project {
+        display: block;
+    }
+
     .project-image {
         display: none;
     }
 
     .project-info {
-        position: relative;
-        margin: 0;
         padding: 30px 15px;
-        top: auto;
-        transform: none;
     }
 
     footer {

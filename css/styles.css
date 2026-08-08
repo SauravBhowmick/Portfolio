@@ -631,6 +631,8 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -640,20 +642,19 @@ footer {
 }
 
 .project-image {
-    float: left
+    flex-shrink: 0;
 }
 
 .project-image img {
     max-width: 300px;
     height: auto;
+    display: block;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px
+    flex: 1;
+    padding: 15px;
+    text-align: left;
 }
 
 .project-info h3 {
@@ -1001,15 +1002,14 @@ footer {
     .education-block span {
         float: none
     }
+    .project {
+        display: block
+    }
     .project-image {
         display: none
     }
     .project-info {
-        position: relative;
-        margin: 0;
-        padding: 30px 15px;
-        top: auto;
-        transform: none
+        padding: 30px 15px
     }
     footer {
         text-align: center
