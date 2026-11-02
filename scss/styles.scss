@@ -472,6 +472,15 @@ footer {
         color: $text;
         margin: 0;
     }
+
+    .about-photo {
+        display: block;
+        width: 220px;
+        max-width: 100%;
+        height: auto;
+        margin-top: 8px;
+        border-radius: 4px;
+    }
 }
 
 /*
@@ -919,6 +928,10 @@ footer {
 
         p {
             text-align: left;
+        }
+
+        .about-photo {
+            margin: 8px auto 24px;
         }
     }
 
