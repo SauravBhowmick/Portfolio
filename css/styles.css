@@ -147,8 +147,11 @@ header.sticky {
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
+    border: 0;
     border-radius: 4px;
     background: #fff;
+    font-family: inherit;
+    line-height: 1;
     transition: all 0.3s ease;
 }
 
@@ -164,8 +167,10 @@ header.sticky {
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
+    border: 0;
     cursor: pointer;
     color: #3498db;
+    font-family: inherit;
     transition: all 0.3s ease;
 }
 
@@ -995,6 +1000,16 @@ footer {
     #menu li {
         display: block;
         margin-bottom: 10px
+    }
+    .no-js header {
+        display: block;
+        position: relative;
+        height: auto;
+        bottom: auto
+    }
+    .no-js #mobile-menu-open,
+    .no-js #mobile-menu-close {
+        display: none
     }
     #lead-content h1 {
         font-size: 2em

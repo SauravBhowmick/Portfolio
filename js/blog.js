@@ -73,6 +73,7 @@
             postEl.innerHTML =
                 '<p class="blog-back"><a href="blog.html">All posts</a></p>' +
                 "<h2>This post is not here.</h2>";
+            focusPostHeading();
             return;
         }
 
@@ -91,6 +92,14 @@
             '<div class="blog-body">' + body + "</div>";
 
         window.scrollTo(0, 0);
+        focusPostHeading();
+    }
+
+    function focusPostHeading() {
+        var heading = postEl.querySelector("h2");
+        if (!heading) return;
+        heading.setAttribute("tabindex", "-1");
+        heading.focus();
     }
 
     function route() {

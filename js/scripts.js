@@ -34,7 +34,7 @@
         }, Math.min(500, Math.abs(window.pageYOffset - $(heading).offset().top) / 4));
 
         if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
+            setMenuOpen(false);
         }
     });
 
@@ -79,14 +79,19 @@
 
     });
 
+    function setMenuOpen(isOpen) {
+        $('header, body').toggleClass('active', isOpen);
+        $('#mobile-menu-open, #mobile-menu-close').attr('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
     // Open mobile menu
     $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
+        setMenuOpen(true);
     });
 
     // Close mobile menu
     $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
+        setMenuOpen(false);
     });
 
     // Load additional projects

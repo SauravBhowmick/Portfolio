@@ -220,8 +220,11 @@ header {
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
+    border: 0;
     border-radius: 4px;
     background: $background;
+    font-family: inherit;
+    line-height: 1;
 }
 
 #mobile-menu-close {
@@ -232,8 +235,10 @@ header {
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
+    border: 0;
     cursor: pointer;
     color: $base-color;
+    font-family: inherit;
 
     span {
         font-size: 0.5em;
@@ -948,6 +953,18 @@ footer {
         }
     }
 
+    .no-js header {
+        display: block;
+        position: relative;
+        height: auto;
+        bottom: auto;
+    }
+
+    .no-js #mobile-menu-open,
+    .no-js #mobile-menu-close {
+        display: none;
+    }
+
     #lead-content {
         h1 {
             font-size: 2em;
@@ -1049,6 +1066,14 @@ footer {
     border-radius: 4px;
     text-decoration: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover,
+    &:focus {
+        border-color: $base-color;
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
 
     h3 {
         margin: 0 0 8px;
@@ -1102,6 +1127,10 @@ footer {
     a {
         color: $base-color;
         text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
