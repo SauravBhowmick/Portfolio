@@ -436,6 +436,15 @@ footer {
     margin-bottom: 0;
 }
 
+#about .about-photo {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
 #experience {
     background: #f2f2f5;
     padding: 75px 15px;
@@ -974,6 +983,9 @@ footer {
     }
     #about p {
         text-align: left
+    }
+    #about .about-photo {
+        margin: 8px auto 24px
     }
 }
 
