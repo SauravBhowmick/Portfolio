@@ -18,23 +18,23 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
-    // Animate to section when nav is clicked
+    // Scroll only for same-page anchors. Other menu links open their own page.
     $('header a').click(function(e) {
 
-        // Treat as normal link if no-scroll class
         if ($(this).hasClass('no-scroll')) return;
 
-        e.preventDefault();
         var heading = $(this).attr('href');
+        if (!heading || heading.charAt(0) !== '#') return;
+
+        e.preventDefault();
         var scrollDistance = $(heading).offset().top;
 
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
         }, Math.min(500, Math.abs(window.pageYOffset - $(heading).offset().top) / 4));
 
-        // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
+            setMenuOpen(false);
         }
     });
 
@@ -79,14 +79,19 @@
 
     });
 
+    function setMenuOpen(isOpen) {
+        $('header, body').toggleClass('active', isOpen);
+        $('#mobile-menu-open, #mobile-menu-close').attr('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
     // Open mobile menu
     $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
+        setMenuOpen(true);
     });
 
     // Close mobile menu
     $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
+        setMenuOpen(false);
     });
 
     // Load additional projects
