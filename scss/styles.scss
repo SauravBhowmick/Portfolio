@@ -731,6 +731,20 @@ footer {
         margin-bottom: 50px;
     }
 
+    .skill-group {
+        max-width: 800px;
+        margin: 0 auto 28px;
+
+        h3 {
+            margin: 0 0 8px;
+            color: $text;
+            font-size: 0.85em;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+    }
+
     ul {
         display: block;
         margin: 0 auto;
