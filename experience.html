@@ -58,29 +58,37 @@
         <div id="experience-timeline">
             <div data-date="June 2026 – Present">
                 <h3>Institute for Sustainable Energy Systems (INES), Hochschule Offenburg, Germany</h3>
-                <h4>Research Assistant – Applied ML for Power Systems</h4>
+                <h4>Academic Researcher – Applied Machine Learning</h4>
                 <p>
-                    <strong>★ IEEE GPECOM 2026 International Conference Publication:</strong> Presented peer-reviewed research on ML benchmarking for industrial power quality anomaly detection at IEEE GPECOM 2026 in Naples, Italy.
+                    I analyse measurement data from industrial grids and build machine-learning models for time-series anomaly detection and forecasting. I presented this work at IEEE GPECOM 2026 in Naples. “Machine Learning Power Quality Anomaly Detection as a Foundation for Predictive Maintenance in Industrial Grids” has been accepted for IEEE ENERGYCON 2026 in Paris.
                 </p>
                 <p>
-                    Set up and configure power quality measurement devices and data acquisition infrastructure at industrial grid monitoring sites. Capture and validate high-resolution time-series measurement data (voltage waveforms, power quality parameters), including timestamp validation, UTC handling and systematic data quality checks. Analyse grid measurement data and develop ML-based anomaly detection and forecasting models for energy grid systems.
+                    I built an edge device for data acquisition. Firmware in C++ on an ESP32 reads a three-phase industrial power meter over RS-485 (IEC 62056-21 / D0) and a climate sensor over I²C, then publishes JSON over MQTT. I debugged it until it reliably captured BCC-checked OBIS blocks on an 8-second cycle.
                 </p>
-            </div>
-
-                        <div data-date="August 2025 – May 2026">
-                <h3>Offenburg University of Applied Sciences</h3>
-                <h4>Guest Researcher</h4>
                 <p>
-                    Continued advanced research in renewable energy systems and data engineering, contributing to ongoing projects at the Institute for Sustainable Energy Systems. This role extended my work in power quality analysis, machine learning applications in energy systems, and industrial IoT integration. I also presented my Research work in IEEE AUPEC 2025 Conference happened in Brisbane, Queensland, Australia.
-					My Paper Topic is "Robust Transient and Anomaly Detection in Voltage Waveforms Using Curve-Fitted Sinusoidal Models".
+                    I own the Node-RED acquisition flow for the lab test bench. Data from the grid emulator, a Janitza UMG 801, and an OPC-UA load emulator is written automatically to MySQL and InfluxDB, with timestamp checks, UTC handling, and data-quality controls.
+                </p>
+                <p>
+                    I also run an internal documentation portal on a local LLM (Ollama, RAG, FastAPI, PostgreSQL with pgvector), packaged with Docker Compose and used daily by the team.
                 </p>
             </div>
 
-            <div data-date="May 2025 – August 2025">
-                <h3>Grydion</h3>
-                <h4>Data Scientist | Data Analyst</h4>
+            <div data-date="January 2026 – Present">
+                <h3>Grydion UG, Berlin</h3>
+                <h4>Data Scientist &amp; Analyst (freelance)</h4>
                 <p>
-                    Analyzed power electronics devices, applying advanced data science techniques to optimize device performance and reliability. Conducted comprehensive data analysis to identify patterns, anomalies, and performance metrics in power electronic systems. Utilized Python, machine learning libraries, and statistical methods to derive actionable insights for improving device efficiency and operational parameters.
+                    <strong>Since January 2026, and earlier from May to August 2025:</strong> I investigate grid instabilities on large MS SQL operating datasets, including unbalanced currents, phase asymmetry, and phase-angle shifts.
+                </p>
+                <p>
+                    I work on a web-based grid simulation platform with integrated ML models in TypeScript and Python, aligned with ISO 50001. I also build Python ETL pipelines and Grafana dashboards that monitor voltage behaviour.
+                </p>
+            </div>
+
+            <div data-date="August 2025 – May 2026">
+                <h3>Hochschule Offenburg, Germany</h3>
+                <h4>Guest Researcher – Applied Machine Learning</h4>
+                <p>
+                    I detected transients and anomalies in voltage waveforms using curve fitting, signal processing, and machine learning. I presented “Robust Transient and Anomaly Detection in Voltage Waveforms Using Curve-Fitted Sinusoidal Models” at IEEE AUPEC 2025 in Brisbane.
                 </p>
             </div>
 
