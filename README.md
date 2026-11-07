@@ -11,6 +11,7 @@ Based on [Ryan Fitzgerald's devportfolio template](https://github.com/RyanFitzge
 | About | `index.html` |
 | Experience | `experience.html` |
 | Education | `education.html` |
+| Publications | `publications.html` |
 | Projects | `projects.html` |
 | Skills | `skills.html` |
 | Awards | `awards.html` |
