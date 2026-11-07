@@ -682,6 +682,10 @@ footer {
     img {
         display: block;
     }
+
+    &.show-certificate img {
+        max-width: 380px;
+    }
 }
 
 .project-info {
@@ -1022,6 +1026,15 @@ footer {
 
     .project-image {
         display: none;
+
+        &.show-certificate {
+            display: block;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     }
 
     .project-info {

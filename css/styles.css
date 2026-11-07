@@ -789,6 +789,10 @@ footer {
     height: auto;
 }
 
+#awards .project-image.show-certificate img {
+    max-width: 380px;
+}
+
 #volunteer {
     background: #fff;
     padding: 75px 15px;
@@ -1058,6 +1062,13 @@ footer {
     }
     .project-image {
         display: none
+    }
+    .project-image.show-certificate {
+        display: block
+    }
+    .project-image.show-certificate img {
+        max-width: 100%;
+        height: auto
     }
     .project-info {
         padding: 30px 15px
