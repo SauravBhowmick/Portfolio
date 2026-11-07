@@ -1167,6 +1167,64 @@ footer {
     text-align: center;
 }
 
+#publications {
+    background: #fff;
+    padding: 75px 15px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 15px;
+    }
+}
+
+.publications-intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: $text;
+    font-size: 0.95em;
+}
+
+.publication {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px 18px;
+    border: 1px solid $border;
+    text-align: left;
+
+    h3 {
+        font-weight: 500;
+        margin: 0 0 8px 0;
+        color: $heading;
+        font-size: 1.15em;
+        line-height: 1.4;
+    }
+
+    p {
+        margin: 0 0 8px 0;
+        color: $text;
+        font-size: 0.9em;
+        line-height: 1.5;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+    }
+}
+
+.publication .publication-meta {
+    color: $base-color;
+    font-size: 0.85em;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+}
+
 // Extra Small Devices
 @media only screen and (max-width : 480px) {
 

@@ -1192,6 +1192,64 @@ footer {
     text-align: center
 }
 
+#publications {
+    background: #fff;
+    padding: 75px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    text-align: center
+}
+
+#publications h2 {
+    color: #374054;
+    margin-bottom: 15px
+}
+
+.publications-intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #74808a;
+    font-size: 0.95em
+}
+
+.publication {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px 18px;
+    border: 1px solid #dcd9d9;
+    text-align: left
+}
+
+.publication h3 {
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    color: #374054;
+    font-size: 1.15em;
+    line-height: 1.4
+}
+
+.publication p {
+    margin: 0 0 8px 0;
+    color: #74808a;
+    font-size: 0.9em;
+    line-height: 1.5
+}
+
+.publication p:last-child {
+    margin-bottom: 0
+}
+
+.publication .publication-meta {
+    color: #3498db;
+    font-size: 0.85em;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px
+}
+
+.publication a:hover,
+.publication a:focus {
+    text-decoration: underline
+}
+
 @media only screen and (max-width: 480px) {
     #lead-content h1 {
         font-size: 1.5em
